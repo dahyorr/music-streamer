@@ -1,13 +1,249 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", sans-serif;
+  background: #171219;
+  background-attachment: fixed;
+}
+
+.App {
+  height: 100vh;
+}
+.App .wrapper {
+  height: calc(100vh - 45px);
+}
+
+.container {
+  max-width: 1366px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.nav {
+  height: 45px;
+  background-color: #a03fa0;
+  width: 100%;
+  color: white;
+}
+.nav .container {
+  align-items: center;
+  height: 100%;
+}
+.nav .container h2 {
+  margin-left: 5rem;
+}
+
+.Header {
+  height: 50px;
+  background-color: #35bb3c;
+}
+.Header .Search {
+  width: 75%;
+  height: 48px;
+  margin: auto;
+  position: relative;
+  top: calc(50px - 24px);
+}
+.Header .Search input {
+  width: calc(100% - 75px);
+  height: 100%;
+  border: none;
+  background: #3c383d;
+  color: white;
+  float: left;
+  border-style: solid;
+  border-color: #a03fa0;
+  border-width: 1px 0 1px 1px;
+  border-radius: 15px 0 0 15px;
+  font-size: 1.5rem;
+  padding: 0.2rem 1rem;
+}
+.Header .Search input:focus {
+  outline: none;
+}
+.Header .Search .submit {
+  width: 75px;
+  height: 100%;
+  background-color: #272129;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #a03fa0;
+  float: right;
+}
+.Header .Search .submit .icon {
+  font-size: 2rem;
+}
+
+.content {
+  background-color: #276fbf;
+  height: calc(100% - 135px);
+  width: 100%;
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+}
+
+.ProgressBar {
+  width: 100%;
+  height: 4px;
+}
+.ProgressBar .bar {
+  height: 100%;
+  width: 20%;
+  background-color: #1837ce;
+  position: relative;
+}
+.ProgressBar .bar .hook {
+  height: 8px;
+  width: 10px;
+  background-color: red;
+  position: absolute;
+  top: -2px;
+  right: 0;
+}
+
+.Player {
+  width: 100%;
+  height: 81px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.Player img {
+  height: 100%;
+  margin-right: 0.5rem;
+}
+.Player .track-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Player .controls {
+  display: flex;
+  width: 150px;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.Player .controls button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.Player .controls button i {
+  font-size: 2.5rem;
+}
+
+.Signin {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.Signin .container {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.Signin .container .large-text {
+  position: relative;
+  bottom: 50px;
+  font-size: 5rem;
+}
+.Signin .container button {
+  display: flex;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  background-color: #35bb3c;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+.Signin .container button img {
+  width: 30px;
+  float: left;
+  margin-right: 10px;
+}
+
+.SearchList {
+  height: 100%;
+  overflow: auto;
+  padding: 0 0.5rem;
+}
+.SearchList::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: transparent;
+}
+.SearchList::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+.SearchList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #0000002c;
+}
+
+.TrackListItem {
+  width: 100%;
+  height: 116px;
+  display: flex;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  margin-bottom: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.TrackListItem:last-child {
+  margin-bottom: 0;
+}
+.TrackListItem img {
+  height: 100%;
+  width: 100px;
+}
+.TrackListItem .track-info {
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+.TrackListItem .track-info .info {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.TrackListItem .track-info .buttons {
+  width: 15%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.TrackListItem .track-info .buttons button {
+  padding: 0.75rem;
+}
+.TrackListItem .track-info .buttons button i {
+  font-size: 1.75rem;
 }

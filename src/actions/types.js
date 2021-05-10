@@ -1,0 +1,6 @@
+// export const AUTHORIZE = "AUTHORIZE"
+export const CHECK_AUTH = "CHECK_AUTH"
+export const AUTH_DATA = "AUTH_DATA"
+export const AUTH_ERROR = "AUTH_ERROR"
+export const SEARCH_RESULT = "SEARCH_RESULT"
+export const SEARCH_ERROR = "SEARCH_ERROR"
