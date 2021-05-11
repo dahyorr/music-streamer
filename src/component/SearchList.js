@@ -3,7 +3,6 @@ import TrackListItem from './TrackListItem'
 const SearchList = ({searchResult}) =>{
     const renderResult = searchResult.map(track => <TrackListItem track={track} key={track.id}/> )
 
-    console.log(searchResult)
     return(
         <div className="SearchList container">
             {renderResult}

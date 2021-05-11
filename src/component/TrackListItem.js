@@ -8,10 +8,10 @@ const TrackListItem = ({track}) =>{
                     <h4>{track.artists[0].name}</h4>
                     <p>{track.album.name}, {track.album.release_date.slice(0,4)}</p>
                 </div>
-                <div className="buttons">
+                {/* <div className="buttons">
                     <button><i className="fas fa-play"></i></button>
                     <button><i className="fas fa-plus"></i></button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

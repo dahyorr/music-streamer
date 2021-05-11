@@ -83,8 +83,8 @@ export const search = (input) => (dispatch) => {
     }));
 };
 
-export const getPlayingTrack = () => dispatch =>{
-  spotify.get('me/player',{
-    headers: getHeaders()
-  }).then(r=> console.log(r)).catch(error => console.log(error))
-}
+// export const getPlayingTrack = () => dispatch =>{
+//   spotify.get('me/player',{
+//     headers: getHeaders()
+//   }).then(r=> console.log(r)).catch(error => console.log(error))
+// }

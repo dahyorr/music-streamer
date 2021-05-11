@@ -2,7 +2,7 @@ const Nav = () =>{
     return(
         <div className="nav">
             <div className="container flex">
-                <h2>MusicStreamer</h2>
+                <h2>MusicLookup</h2>
             </div>
         </div>
     )
